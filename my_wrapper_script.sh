@@ -4,10 +4,12 @@
 set -m
   
 # Start the primary process and put it in the background
-npm start /home/whaticket/whatsapp/backend/dist/server.js &
+cd /home/whaticket/whatsapp/backend
+npm start dist/server.js &
   
+cd /home/whaticket/whatsapp/frontend
 # Start the helper process
-npm start /home/whaticket/whatsapp/frontend/dist/server.js
+npm start server.js
   
 # the my_helper_process might need to know how to wait on the
 # primary process to start before it does its work and returns
