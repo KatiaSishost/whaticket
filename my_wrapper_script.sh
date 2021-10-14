@@ -4,10 +4,10 @@
 set -m
   
 # Start the primary process and put it in the background
-./my_main_process &
+npm start /home/whaticket/backend/dist/server.js &
   
 # Start the helper process
-./my_helper_process
+npm start /home/whaticket/frontend/server.js
   
 # the my_helper_process might need to know how to wait on the
 # primary process to start before it does its work and returns
